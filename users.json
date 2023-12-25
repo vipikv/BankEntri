@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "name": "c",
+      "email": "c@c.com",
+      "password": "1",
+      "phone": 1,
+      "account_number": 842705122399,
+      "balance": 30.0,
+      "last_deposited_at": "2023-12-25 17:17:25.012790",
+      "last_withdrawn_at": ""
+    }
+  ]
+}
