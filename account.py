@@ -25,7 +25,6 @@ class Accounts:
             json.dump(newUsers, file, indent=2)
 
     def signup(self):
-        list1 = [int(i) for i in str(self.new_account_number)]
         print("SIGN UP...")
         self.ReadUsers()
         email_pattern = r'^\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
@@ -51,11 +50,14 @@ class Accounts:
                 try:
                     phone = int(phone)
                     if self.users:
+                        email_exists = False
                         for i in self.users:
                             if email == i['email']:
                                 print(f"email {email} already exists")
                                 print("please ,try again..")
-                                continue
+                                email_exists = True
+                        if email_exists:
+                            continue
                 except:
                     print('phone should be integer')
                     continue
